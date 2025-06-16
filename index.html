@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lenard Avila - Full Stack Web Developer portfolio using Vue, Laravel, Tailwind" />
+  <title>Lenard Avila | Web Developer</title>
+  <link rel="icon" type="image/png" href="./favicon.png" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <style>
+    body {
+      font-family: 'Fira Code', monospace;
+      scroll-behavior: smooth;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+    .visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+      input:checked ~ .dot {
+    transform: translateX(1rem);
+    background-color: #14b8a6; /* teal-500 */
+  }
+  </style>
+</head>
+<body class="bg-white text-black dark:bg-gray-900 dark:text-white">
+
+<!-- Header -->
+<header class="bg-white text-black dark:bg-gray-900 dark:text-white fixed top-0 left-0 right-0 z-50 shadow-md">
+  <div class="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto">
+
+    <!-- Logo -->
+    <div class="text-xl font-bold text-teal-600">Lenard Avila</div>
+
+    <!-- Desktop Nav -->
+    <div class="hidden md:flex items-center gap-6 text-sm ml-auto">
+      <a href="#home" class="hover:text-teal-600 transition">Home</a>
+      <a href="#projects" class="hover:text-teal-600 transition">Projects</a>
+      <a href="#stack" class="hover:text-teal-600 transition">Stack</a>
+      <a href="#experience" class="hover:text-teal-600 transition">Experience</a>
+      <a href="#education" class="hover:text-teal-600 transition">Education</a>
+      <a href="#certifications" class="hover:text-teal-600 transition">Certifications</a>
+
+      <!-- Dark Mode Switch -->
+<!-- Toggle Switch (Desktop) -->
+<label class="relative inline-flex items-center cursor-pointer ml-4">
+  <input id="darkModeToggle" type="checkbox" class="sr-only peer">
+  <div class="w-11 h-6 bg-gray-300 peer-checked:bg-teal-500 rounded-full transition-all duration-300"></div>
+  <div class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition-all duration-300 peer-checked:translate-x-5"></div>
+  <i id="darkIcon" class="bi bi-moon-stars-fill text-xl ml-2"></i>
+</label>
+
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button id="nav-toggle" class="md:hidden text-xl hover:text-teal-600">
+      <i class="bi bi-list"></i>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden hidden px-6 pb-4">
+    <a href="#home" class="block py-2 hover:text-teal-600">Home</a>
+    <a href="#projects" class="block py-2 hover:text-teal-600">Projects</a>
+    <a href="#stack" class="block py-2 hover:text-teal-600">Stack</a>
+    <a href="#summary" class="block py-2 hover:text-teal-600">Summary</a>
+    <a href="#skills" class="block py-2 hover:text-teal-600">Skills</a>
+    <a href="#experiences" class="block py-2 hover:text-teal-600">Experience</a>
+    <a href="#education" class="block py-2 hover:text-teal-600">Education</a>
+    <a href="#certifications" class="block py-2 hover:text-teal-600">Certifications</a>
+
+    <!-- Dark Mode Toggle for Mobile -->
+<!-- Toggle Switch (Mobile) -->
+<label class="relative inline-flex items-center cursor-pointer mt-4">
+  <input id="darkModeToggleMobile" type="checkbox" class="sr-only peer">
+  <div class="w-11 h-6 bg-gray-300 peer-checked:bg-teal-500 rounded-full transition-all duration-300"></div>
+  <div class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition-all duration-300 peer-checked:translate-x-5"></div>
+  <i id="darkIconMobile" class="bi bi-moon-stars-fill text-xl ml-2"></i>
+</label>
+
+  </div>
+</header>
+
+
+
+<main class="overflow-y-scroll scroll-smooth no-scrollbar pt-20">
+
+<!-- Hero / About -->
+<section id="home" class="fade-in min-h-screen flex flex-col md:flex-row items-center justify-between px-10 py-24 bg-white text-black dark:bg-gray-900 dark:text-white gap-10">
+  <div class="md:w-1/2 flex flex-col items-center text-center p-6 rounded-2xl shadow-xl border border-gray-200 bg-white text-black dark:bg-gray-900 dark:text-white">
+    <img src="./images/nard.jpg" alt="Lenard Avila" class="w-36 h-36 rounded-full border-4 border-teal-500 shadow-lg mb-4"/>
+    <h1 class="text-4xl font-bold tracking-wide text-teal-600">Lenard Avila</h1>
+    <p class="text-lg text-gray-700 dark:text-gray-300">Full Stack Web Developer</p>
+    <p class="text-sm text-gray-700 dark:text-gray-300 mt-1">avilalenard17@gmail.com</p>
+  </div>
+  <div class="md:w-1/2">
+    <h2 class="text-3xl text-teal-600 font-bold mb-4">About Me</h2>
+    <p class="leading-relaxed text-gray-700 dark:text-gray-300 mb-4">
+      I'm a passionate Full Stack Web Developer specializing in Vue.js and Laravel. I design and develop seamless web apps that blend functionality with elegance.
+    </p>
+    <p class="leading-relaxed text-gray-700 dark:text-gray-300 mb-4">
+      When I’m not coding, I dive into UI/UX design, AI integration, and digital innovation.
+    </p>
+    <p class="text-sm text-gray-500 dark:text-gray-600 italic mt-4">“Code is not just syntax — it's a bridge between ideas and reality.”</p>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="fade-in min-h-screen flex flex-col justify-center px-10 bg-white text-black dark:bg-gray-900 dark:text-white">
+  <h2 class="text-3xl text-teal-600 font-bold mb-6">Projects</h2>
+  <div class="space-y-6 text-gray-800">
+    <div>
+      <h3 class="text-xl text-teal-500 font-semibold">Travel and Tours System with AI Planner</h3>
+      <p class="text-gray-700 dark:text-gray-300">A web platform that allows users to book tours, apply for passports/visas, and use an AI-powered planner for smart itineraries.</p>
+    </div>
+    <div>
+      <h3 class="text-xl text-teal-500 font-semibold">FitFusion Mobile App</h3>
+      <p class="text-gray-700 dark:text-gray-300">Fitness tracker with customizable workouts, nutrition logging, and real-time sync with wearables using Vue Native and Firebase.</p>
+    </div>
+    <div>
+      <h3 class="text-xl text-teal-500 font-semibold">Inventory Management System</h3>
+      <p class="text-gray-700 dark:text-gray-300">Laravel-based platform for retail product tracking, sales reporting, and role-based user management.</p>
+    </div>
+    <div>
+      <h3 class="text-xl text-teal-500 font-semibold">Library Fine Calculation AI</h3>
+      <p class="text-gray-700 dark:text-gray-300">Smart module that auto-calculates fines and predicts reading patterns using basic AI integration.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Stack -->
+<section id="stack" class="fade-in min-h-screen flex flex-col justify-center px-10 bg-white text-black dark:bg-gray-900 dark:text-white">
+  <h2 class="text-3xl text-teal-600 font-bold mb-6">Technology Stack</h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 p-6 rounded-xl shadow-md text-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg" class="mx-auto w-12 h-12 mb-2" />
+        <h3 class="text-lg font-semibold text-teal-500">Vue.js</h3>
+        <p class="text-sm text-gray-700 dark:text-gray-300">Reactive frontend architecture with component-based development.</p>
+      </div>
+<div class="bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 p-6 rounded-xl shadow-md text-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Laravel.svg" class="mx-auto w-12 h-12 mb-2" />
+        <h3 class="text-lg font-semibold text-teal-500">Laravel</h3>
+        <p class="text-sm text-gray-700 dark:text-gray-300">Backend PHP framework for secure and elegant development.</p>
+      </div>
+<div class="bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 p-6 rounded-xl shadow-md text-center">
+        <img src="https://www.mysql.com/common/logos/logo-mysql-170x115.png" class="mx-auto w-16 h-12 mb-2" />
+        <h3 class="text-lg font-semibold text-teal-500">MySQL</h3>
+        <p class="text-sm text-gray-700 dark:text-gray-300">Structured data storage and query optimization for applications.</p>
+      </div>
+  </div>
+</section>
+
+<!-- Summary -->
+<section id="summary" class="fade-in min-h-screen flex flex-col justify-center px-10 bg-white text-black dark:bg-gray-900 dark:text-white">
+<div class="bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 p-6 rounded-xl shadow-md text-center">
+    <h2 class="text-3xl text-teal-600 font-bold mb-4">Professional Summary</h2>
+    <p class="leading-relaxed text-gray-700 dark:text-gray-300">
+      Passionate, detail-oriented developer skilled in responsive design, frontend/backend development, REST API integration, and database administration using Vue.js, Laravel, and MySQL.
+    </p>
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="fade-in min-h-screen flex flex-col justify-center px-10 bg-white text-black dark:bg-gray-900 dark:text-white">
+  <h2 class="text-3xl text-teal-600 font-bold mb-6">Skills & Tools</h2>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-6 text-sm">
+<div class="bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 p-6 rounded-xl shadow-md text-center">
+        <p class="mb-2 font-semibold text-teal-500">Frontend</p>
+        <ul class="space-y-1 text-gray-700 dark:text-gray-300">
+          <li>Vue.js</li>
+          <li>Tailwind CSS</li>
+          <li>JavaScript (ES6+)</li>
+          <li>HTML5, CSS3</li>
+        </ul>
+      </div>
+<div class="bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 p-6 rounded-xl shadow-md text-center">
+        <p class="mb-2 font-semibold text-teal-500">Backend</p>
+        <ul class="space-y-1 text-gray-700 dark:text-gray-300">
+          <li>Laravel</li>
+          <li>PHP</li>
+          <li>REST APIs</li>
+        </ul>
+      </div>
+<div class="bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 p-6 rounded-xl shadow-md text-center">
+        <p class="mb-2 font-semibold text-teal-500">Database</p>
+        <ul class="space-y-1 text-gray-700 dark:text-gray-300">
+          <li>MySQL</li>
+          <li>SQLyog</li>
+        </ul>
+      </div>
+    </div>
+
+</section>
+
+<!-- Experience -->
+<section id="experiences" class="fade-in min-h-screen flex flex-col justify-center px-10 bg-white text-black dark:bg-gray-900 dark:text-white">
+  <h2 class="text-3xl text-teal-600 font-bold mb-4">Experience</h2>
+  <div class="space-y-6">
+<div class="bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 p-6 rounded-xl shadow-md ">
+      <h3 class="text-xl font-semibold">JVD Event and Travel Management Co.</h3>
+      <p class="text-sm text-gray-500 dark:text-gray-300 mb-2">Full Stack Developer | Aug 2024 - Jun 2025</p>
+      <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300">
+        <li>Built tools for travel applications</li>
+        <li>Integrated Vue.js with Laravel APIs</li>
+        <li>Worked with HR, Finance, and Logistics teams</li>
+      </ul>
+    </div>
+<div class="bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 p-6 rounded-xl shadow-md">
+      <h3 class="text-xl font-semibold">NEGOSYOLABPH Business Development Services</h3>
+      <p class="text-sm text-gray-500 dark:text-gray-300 mb-2">Web Developer | Mar 2025 - Jun 2025</p>
+      <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300">
+        <li>Developed BumpCards and Trading System</li>
+        <li>Handled user roles, logs, reports</li>
+      </ul>
+    </div>
+    </div>
+
+</section>
+
+<!-- Education -->
+<section id="education" class="fade-in min-h-screen flex flex-col justify-center px-10 bg-white text-black dark:bg-gray-900 dark:text-white">
+ <h2 class="text-3xl text-teal-600 font-bold mb-4">Education</h2>
+    <div class="flex flex-col sm:flex-row items-center gap-4 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 p-6 rounded-xl shadow-md">
+
+      <img src="./images/bcp.png" alt="BCP Logo" class="w-16 h-16 object-contain"/>
+      <div>
+        <p class="text-lg font-medium">BS in Information Technology</p>
+        <p class="text-sm text-gray-600 dark:text-gray-400">2022 - 2025 | Bestlink College of the Philippines</p>
+      </div>
+    </div>
+
+</section>
+
+<!-- Certifications -->
+<section id="certifications" class="fade-in min-h-screen flex flex-col justify-center px-10 bg-white text-black dark:bg-gray-900 dark:text-white">
+  <h2 class="text-3xl text-teal-600 font-bold mb-4">Certifications & Seminars</h2>
+  <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-1">
+    <li>Research Forum on AI & Innovation</li>
+    <li>Truline Seminar - Information Management in the Digital Age</li>
+    <li>Webinar - Green IT Innovations</li>
+  </ul>
+</section>
+
+<!-- Footer -->
+<footer class="text-center text-gray-600 text-sm py-8 border-t border-gray-300 bg-white text-black dark:bg-gray-900 dark:text-white">
+  <div class="flex justify-center gap-4 mb-4 text-xl text-gray-700 dark:text-gray-300">
+    <a href="#" class="hover:text-teal-500"><i class="bi bi-facebook"></i></a>
+    <a href="#" class="hover:text-teal-500"><i class="bi bi-instagram"></i></a>
+    <a href="#" class="hover:text-teal-500"><i class="bi bi-tiktok"></i></a>
+    <a href="#" class="hover:text-teal-500"><i class="bi bi-linkedin"></i></a>
+    <a href="mailto:avilalenard17@gmail.com" class="hover:text-teal-500"><i class="bi bi-envelope-fill"></i></a>
+  </div>
+  <p>&copy; 2025 Lenard Avila. Built with ❤️ using Vue.js and Laravel.</p>
+</footer>
+
+</main>
+
+<script>
+  const html = document.documentElement;
+  const darkToggleDesktop = document.getElementById('darkModeToggle');
+  const darkToggleMobile = document.getElementById('darkModeToggleMobile');
+  const darkIcon = document.getElementById('darkIcon');
+  const darkIconMobile = document.getElementById('darkIconMobile');
+
+  // Set initial theme from localStorage
+  if (localStorage.getItem("theme") === "dark") {
+    html.classList.add("dark");
+  } else {
+    html.classList.remove("dark");
+  }
+
+  // Update icons
+  function updateIcons() {
+    const isDark = html.classList.contains("dark");
+    darkIcon.className = isDark ? 'bi bi-sun-fill' : 'bi bi-moon-stars-fill';
+    darkIconMobile.className = isDark ? 'bi bi-sun-fill' : 'bi bi-moon-stars-fill';
+  }
+
+  // Initial icon load
+  updateIcons();
+
+  // Toggle handlers
+  function toggleTheme() {
+    html.classList.toggle("dark");
+    localStorage.setItem("theme", html.classList.contains("dark") ? "dark" : "light");
+    updateIcons();
+  }
+
+  darkToggleDesktop.addEventListener("click", toggleTheme);
+  darkToggleMobile.addEventListener("click", toggleTheme);
+
+  // Mobile menu toggle
+  document.getElementById('nav-toggle').addEventListener('click', () => {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+  });
+
+  // Optional fade-in animation
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
